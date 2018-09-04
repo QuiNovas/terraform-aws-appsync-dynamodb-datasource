@@ -43,6 +43,7 @@ resource "aws_iam_role_policy" "dynamo_access" {
 
 resource "aws_appsync_datasource" "dynamodb_datasource" {
   api_id            = "${var.api_id}"
+  description       = "${var.description}"
   dynamodb_config {
     region      = "${local.region}"
     table_name  = "${var.dynamodb_table_name}"

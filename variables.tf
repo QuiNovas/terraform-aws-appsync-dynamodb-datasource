@@ -3,6 +3,12 @@ variable "api_id" {
   type        = "string"
 }
 
+variable "description" {
+  default     = ""
+  description = "A description of the DataSource."
+  type        = "string"
+}
+
 variable "dynamodb_table_arn" {
   description = "The DynamoDB Table ARN."
   type        = "string"
