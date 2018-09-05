@@ -20,6 +20,8 @@ resource "aws_iam_role" "dynamodb_datasource_role" {
 data "aws_iam_policy_document" "dynamodb_access" {
   statement {
     actions   = [
+      "dynamodb:BatchGetItem",
+      "dynamodb:BatchWriteItem",
       "dynamodb:DeleteItem",
       "dynamodb:GetItem",
       "dynamodb:PutItem",
