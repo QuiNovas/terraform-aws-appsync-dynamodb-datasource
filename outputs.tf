@@ -3,6 +3,11 @@ output "arn" {
   value       = aws_appsync_datasource.dynamodb_datasource.arn
 }
 
+output "datasource_name" {
+  description = "name of datasource"
+  value       = local.name
+}
+
 output "role_arn" {
   description = "The Amazon Resource Name (ARN) specifying the datasource's role. "
   value       = aws_iam_role.dynamodb_datasource_role.arn
