@@ -3,7 +3,7 @@ output "arn" {
   value       = aws_appsync_datasource.dynamodb_datasource.arn
 }
 
-output "datasource_name" {
+output "name" {
   description = "name of datasource"
   value       = local.name
 }
